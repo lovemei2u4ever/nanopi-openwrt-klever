@@ -88,7 +88,7 @@ jobs:
 
           while true; do make download -j && break || true; done
           while true; do make package/download -j && break || true; done
-          make -j1 || make V=s
+          make -j1 V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
