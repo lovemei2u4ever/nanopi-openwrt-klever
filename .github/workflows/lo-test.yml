@@ -76,8 +76,8 @@ jobs:
             sdk_src='https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa53/openwrt-sdk-sunxi-cortexa53_gcc-8.4.0_musl.Linux-x86_64.tar.xz'
           fi
           mkdir sdk && wget -qO- $sdk_src | tar -xJf - -C sdk
-          rm -rf build_dir staging_dir; mv sdk/*/build_dir ./ && rsync -a --ignore-existing sdk/*/staging_dir/ ./staging_dir/
-          rm -rf sdk
+          #rm -rf build_dir staging_dir; mv sdk/*/build_dir ./ && rsync -a --ignore-existing sdk/*/staging_dir/ ./staging_dir/
+          #rm -rf sdk
           fi
           #ln -sf /usr/bin/upx-ucl staging_dir/host/bin/upx
           sed -i '/\(tools\|toolchain\)\/Makefile/d' Makefile
